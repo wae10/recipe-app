@@ -1,6 +1,15 @@
-# recipe
+# Recipe Web-App
 
-get API from spoonacular.com
+Clean interface that allows users the ability to search from over 365,000 recipes. 
+
+Currently available at: https://myrecipe-master.herokuapp.com/
+
+# Instructions
+
+### Obtain Spoonacular API
+  https://rapidapi.com/spoonacular/api/recipe-food-nutrition
+  
+  Replace "API-KEY-HERE" with assigned key.
 
 ### Environment Setup
 
