@@ -1,0 +1,103 @@
+{% extends "bootstrap_layout.html" %}
+{% set active_page = "home" %}
+
+{% block content %}
+
+    <meta charset="utf-8" />
+
+    <!-- for the search icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        ::placeholder {
+        color: gray;
+        }
+
+        form.example input[type=text] {
+        padding: 10px;
+        font-size: 17px;
+        border: 1px solid grey;
+        float: left;
+        width: 80%;
+        background: #f1f1f1;
+        }
+
+        form.example button {
+        float: left;
+        width: 20%;
+        padding: 10px;
+        background: pink;
+        color: white;
+        font-size: 17px;
+        border: 1px solid grey;
+        border-left: none;
+        cursor: pointer;
+        }
+
+        form.example button:hover {
+        background:rgb(248, 168, 181);
+        }
+
+
+
+        .welcome-text h1 {
+        color:white;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 80px;
+        margin: 0;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        }
+        .welcome-text a {
+        color:black;
+        display: inline-block;
+        margin-top: 3%;
+        position: absolute;
+        top: 52%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        }
+
+
+    </style>
+
+    <div class="welcome-text">
+        <h1>
+        Welcome to the Recipe Master
+        </h1>
+        <a>
+            <form class ="example" action="/recipes" method="POST">
+                <input type="text" placeholder="Find a recipe" name="food">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </a>
+    </div>
+
+
+    
+{% endblock %}
+
+
+<!-- <div class="welcome-text">
+    <h1>
+      Welcome to the Recipe Master
+    </h1>
+    <a>
+        <form class ="example" action="/recipes" method="POST">
+            <input type="text" placeholder="Find a recipe" name="food">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </a>
+</div>
+
+<h1 class="center">Welcome to the Recipe Master</h1>
+
+<form class ="example" action="/recipes" method="POST">
+    <input type="text" placeholder="Find a recipe" name="food">
+    <button type="submit"><i class="fa fa-search"></i></button>
+</form> -->

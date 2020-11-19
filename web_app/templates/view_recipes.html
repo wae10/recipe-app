@@ -1,0 +1,77 @@
+
+{% extends "bootstrap_layout.html" %}
+
+{% block content %}
+
+
+<style>
+    .img-container {
+        text-align: center;
+    }
+    .center {
+        text-align: center;
+        list-style-position: inside;
+        color: white;
+        font-size: 80px;
+        margin-bottom: 3%;
+    }
+
+    .imgcenter
+    {
+        text-align: center;
+        list-style-position: inside;
+        font-size: 30px;
+
+    }
+
+    input {
+        background-color: pink;
+        color: white;
+        border: transparent;
+    }
+
+    li {
+        color:white;
+        margin-top: 7%;
+        margin-bottom: 1%;
+    }
+</style>
+
+
+
+<h1 class = "center" >Recipe List for {{food}}</h1>
+
+
+<ol class = "imgcenter">
+
+{% for i in range(0, recipe_list|length) %}
+<div class="img-container">
+    <form action="/recipes/ingredients" method="POST" >
+        <li>
+            <input type = "submit" name = "recipe" value = "{{recipe_list[i]}}">
+        </li>
+    </form>
+
+
+    <img src = "{{'https://spoonacular.com/recipeImages/' + recipe_photos_list[i]}}" style="width:500px;height:600px;" >
+    
+    </div>
+
+    
+
+{% endfor %}
+</ol> 
+
+
+<!-- 
+<form action="/recipes/ingredients" method="POST" >
+    <label>Number:</label>
+    <input type="text" name="recipe" placeholder="1-10">
+    <br>
+    <button>Submit</button>
+</form> -->
+
+
+{% endblock %}
+
+

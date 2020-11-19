@@ -1,0 +1,47 @@
+{% extends "bootstrap_layout.html" %}
+
+{% block content %}
+
+<style>
+    h1 
+    {
+        text-align: center;
+        color: white;
+    }
+    li
+    {
+        color:white;
+    }
+    h2{
+        color:white
+    }
+    h5{
+        color:white;
+    }
+    
+
+</style>
+
+<h1>Ingredients for {{recipe}}</h1>
+
+<ul>
+{% for i in range(0, ingredient|length) %}
+
+    <li>{{recipe_amount_list[i] ~ " " + recipe_amount_unit_list[i] + " " + ingredient[i]}}</li>
+
+{% endfor %}
+
+</ul> 
+
+<h2>Instructions:</h2>
+
+<br>
+
+<h5>{{instructions}}</h5>
+
+<br> 
+
+
+{% endblock %}
+
+
